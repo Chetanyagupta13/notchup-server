@@ -12,8 +12,8 @@ export class Mail{
         this.transport = nodemailer.createTransport(({
             service:'gmail',
             auth:{
-                user:'chetanyagupta13@gmail.com',
-                pass:'@12345Chiko',
+                user:'chetanya1466@gmail.com',
+                pass:'Dr.driving',
             }
         }))
     }
@@ -28,7 +28,7 @@ export class Mail{
 
     private initMailOptions(){
         this.mailOptions = {
-            from:'chetanyagupta13@gmail.com',
+            from:'chetanya1466@gmail.com',
             to:this.toAddress,
             subject:this.subject,
             text:this.message,

@@ -19,6 +19,7 @@ export class BookTrialController{
         let msg:string = `Dear ${body.parentName},\n${body.childName}'s class at ${body.slotTime} for ${body.course.course_name} has been successfully booked.`;
         this._mailer.intializeMail(body.parentEmail, 'NotchUp Trial Class Booked successfully', msg);
         body.booked = true;
+        console.log(body);
         return new ApiResponse<BookTrialItem>(res,body)
             .withData(body)
             .withStatusCode(HTTP_STATUS_CODE.OK)

@@ -20,6 +20,7 @@ class BookTrialController {
             let msg = `Dear ${body.parentName},\n${body.childName}'s class at ${body.slotTime} for ${body.course.course_name} has been successfully booked.`;
             this._mailer.intializeMail(body.parentEmail, 'NotchUp Trial Class Booked successfully', msg);
             body.booked = true;
+            console.log(body);
             return new api_response_handler_1.ApiResponse(res, body)
                 .withData(body)
                 .withStatusCode(api_response_handler_1.HTTP_STATUS_CODE.OK)

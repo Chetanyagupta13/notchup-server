@@ -20,6 +20,10 @@ app.use((req,res,next)=>{
     console.log(req.url);
     next();
 })
+app.get('/',(req,res,next)=>{
+    console.log(req.url);
+    res.send('hello');
+})
 
 app.use('/api', bookTrialRoute)
 

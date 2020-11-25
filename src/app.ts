@@ -5,7 +5,8 @@ import cors from 'cors';
 
 export const app = express();
 
-app.listen(3000,()=>{
+let port = process.env.PORT? process.env.PORT:3000;
+app.listen(port,()=>{
     console.log('server started');
 });
 

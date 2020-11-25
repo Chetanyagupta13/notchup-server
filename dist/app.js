@@ -41,6 +41,6 @@ exports.app.use((req, res, next) => {
 });
 exports.app.get('/', (req, res, next) => {
     console.log(req.url);
-    res.send('hello');
+    res.send('hello' + port);
 });
 exports.app.use('/api', bookTrial_route_1.bookTrialRoute);

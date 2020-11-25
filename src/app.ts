@@ -12,6 +12,7 @@ app.listen(port,()=>{
 
 
 
+
 app.use(bodyParse.urlencoded({extended: false}));
 app.use(bodyParse.json());
 app.use(cors());
@@ -22,7 +23,7 @@ app.use((req,res,next)=>{
 })
 app.get('/',(req,res,next)=>{
     console.log(req.url);
-    res.send('hello');
+    res.send('hello'+port);
 })
 
 app.use('/api', bookTrialRoute)
